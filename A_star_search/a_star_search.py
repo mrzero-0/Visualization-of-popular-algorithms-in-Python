@@ -56,8 +56,10 @@ class Ordered_Node(object):
 		self.priority = priority
 		self.description = description
 		return
-	def __cmp__(self, other):
-		return cmp(self.priority, other.priority)
+# 	def __cmp__(self, other):
+# 		return cmp(self.priority, other.priority)
+	def __lt__(self,other):
+		return self.priority < other.priority
 
 def getHeuristics(G):
 	heuristics = {}
